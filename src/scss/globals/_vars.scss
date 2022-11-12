@@ -1,0 +1,24 @@
+/* COLORS */
+$primary: #cacaca;
+$black: #000000;
+$white: #ffffff;
+/* APPLIED COLORS */
+$textColor: $black;
+
+/* FONT SIZES */
+$fs: 1.6rem;
+
+/* FONT FAMILIES */
+$font: 'Work Sans', sans-serif;
+
+/* BREAKPOINTS */
+$mobileMin: 480px;
+$tabletMin: 768px;
+$desktopMin: 1024px;
+$largeMin: 1440px;
+
+/* BORDER */
+$borderRadius: .8rem;
+
+/* Transitions */
+$transitionAll: all 200ms ease;

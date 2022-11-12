@@ -1,0 +1,19 @@
+/* WITH THIS RULE, 1rem = 10px */
+html {
+  font-size: 62.5%;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+/* NORMALIZING */
+*, *:before, *:after {
+  box-sizing: border-box;
+  font-family: $fs;
+  color: $textColor;
+}
+/* BODY */
+body {
+  font-size: $fs;
+  font-family: $font;
+}
