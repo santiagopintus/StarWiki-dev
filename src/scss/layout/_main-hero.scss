@@ -1,0 +1,42 @@
+.main-hero {
+  height: fit-content;
+  overflow: hidden;
+  width: 100%;
+  background-image: url(../assets/grogu-epic.jpg);
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .main-hero-text-container {
+    background-color: rgba($white, 0.2);
+    backdrop-filter: blur(10px);
+    height: 100%;
+    width: 70vw;
+
+    h1 {
+      color: $white;
+      font-size: 5vw;
+      text-align: center;
+      margin: 0;
+      padding: 2rem;
+    }
+  }
+}
+@include tablet {
+  .main-hero {
+    .main-hero-text-container {
+      width: 50vw;
+    }
+  }
+}
+@include desktop {
+  .main-hero {
+  .main-hero-text-container {
+    h1 {
+      font-size: 5rem;
+    }
+  }
+}
+
+}

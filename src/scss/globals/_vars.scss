@@ -1,15 +1,29 @@
 /* COLORS */
-$primary: #cacaca;
+$darkBlue: #0A1C34;
+$blue: #25ABE0;
+$red: #E45C8C;
 $black: #000000;
 $white: #ffffff;
+
 /* APPLIED COLORS */
+$primary: $blue;
 $textColor: $black;
 
 /* FONT SIZES */
 $fs: 1.6rem;
 
+$h1Fs: 2.8rem;
+$h2Fs: 2.4rem;
+$h3Fs: 2rem;
+$h4Fs: 1.8rem;
+$h1FsDesktop: 3.2rem;
+$h2FsDesktop: 2.8rem;
+$h3FsDesktop: 2.4rem;
+$h4FsDesktop: 2rem;
+
 /* FONT FAMILIES */
-$font: 'Work Sans', sans-serif;
+$font: 'Lato', sans-serif;
+$titleFont: 'star_jediregular';
 
 /* BREAKPOINTS */
 $mobileMin: 480px;

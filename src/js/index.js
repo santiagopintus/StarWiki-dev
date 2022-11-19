@@ -1,1 +1,1 @@
-document.getElementById("output").innerText = 'Sucessfully setup!';
+// document.getElementById("output").innerText = 'Sucessfully setup!';

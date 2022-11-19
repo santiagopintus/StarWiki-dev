@@ -1,7 +1,7 @@
 {
-  "name": "parcel-webapp-template",
+  "name": "StarWiki",
   "version": "1.0.0",
-  "description": "Boilerplate for a simple parcel based web app",
+  "description": "Wiki for learning about Star Wars characters",
   "main": "index.js",
   "scripts": {
     "prestart": "rimraf build/*",
@@ -14,7 +14,7 @@
   "author": "Santiago Pintus",
   "license": "GPL-2.0",
   "devDependencies": {
-    "babel-core": "",
+    "babel-core": "^6.26.3",
     "babel-eslint": "",
     "babel-preset-env": "",
     "eslint": "",
@@ -25,7 +25,8 @@
     "eslint-plugin-react": "",
     "eslint-plugin-react-hooks": "",
     "parcel-bundler": "",
-    "rimraf": ""
+    "rimraf": "",
+    "sass": "^1.56.1"
   },
   "resolutions": {}
 }
