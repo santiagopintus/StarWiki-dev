@@ -1,0 +1,34 @@
+.death-star-container {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  width: 15rem;
+
+  i.death-star-top, i.death-star-bottom {
+    position: absolute;
+    width: 15rem;
+    right: 2rem;
+  }
+  i.death-star-top {
+    bottom: 8rem;
+  }
+  i.death-star-bottom {
+    bottom: .6rem;
+  }
+}
+
+@keyframes deathStarExplodeTop {
+  100% {
+    right: 20rem;
+    bottom: 80rem;
+    transform: rotate(960deg);
+  }
+}
+
+@keyframes deathStarExplodeBottom {
+  100% {
+    right: 50rem;
+    bottom: 20rem;
+    transform: rotate(460deg);
+  }
+}

@@ -28,5 +28,8 @@
     "rimraf": "",
     "sass": "^1.56.1"
   },
-  "resolutions": {}
+  "resolutions": {},
+  "dependencies": {
+    "u": "^0.1.0"
+  }
 }
