@@ -34,5 +34,9 @@ $largeMin: 1440px;
 /* BORDER */
 $borderRadius: .8rem;
 
+/* SHADOWS */
+$primaryShadow: 0 0 3px 0 rgba(0,0,0,.4);
+$hoverShadow: 0 2px 5px 0 rgba(0,0,0,.2);
+
 /* Transitions */
 $transitionAll: all 200ms ease;

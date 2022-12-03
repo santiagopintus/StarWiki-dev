@@ -8,11 +8,8 @@ const starWikiApp = () => {
 };
 
 const getCharacters = (url) => {
-  customFetch(url).then(data => console.log(data))
+  customFetch(url).then((data) => showCharacters(data));
 };
 
-const showCharacters = (char) => {
-  console.log(char);
-};
 
 window.onload = starWikiApp;

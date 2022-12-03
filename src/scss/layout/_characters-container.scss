@@ -1,0 +1,28 @@
+.characters-container {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 5rem;
+
+  .character {
+    box-shadow: $primaryShadow;
+    border-radius: $borderRadius;
+    padding: 1rem;
+    transition: all 200ms ease;
+    cursor: pointer;
+
+    img {
+      max-width: 100%;
+    }
+
+    &:hover {
+      box-shadow: $hoverShadow;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+@include tablet {
+  .characters-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}

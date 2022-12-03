@@ -1,5 +1,5 @@
 const customFetch = async (url) => {
-  return fetch(url).then((data) => data);
+  return fetch(url).then((data) => data.json());
 };
 
 const manageStar = () => {
