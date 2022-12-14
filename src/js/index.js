@@ -1,15 +1,13 @@
-import { customFetch } from "./utils";
-import { manageStar } from "./utils";
+import StarView from "./StarView";
+import StarController from "./starController";
+import StarModel from "./starModel";
 
 const starWikiApp = () => {
-  manageStar();
   const apiUrl = "https://akabab.github.io/starwars-api/api/all.json";
-  getCharacters(apiUrl);
+  const starModel = new StarModel(apiUrl);
+  const starView = new StarView();
+  const starController = new StarController(starModel, starView);
+  starController.startController();
 };
-
-const getCharacters = (url) => {
-  customFetch(url).then((data) => showCharacters(data));
-};
-
 
 window.onload = starWikiApp;
