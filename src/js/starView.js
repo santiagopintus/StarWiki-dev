@@ -37,7 +37,7 @@ export default class StarView {
     console.log("VIEW", char);
 
     this.charDetailsContainer.innerHTML = `
-      <a class="button secondary" href="/"><i class="back-chevron"></i>Back to all characters</a>
+      <a class="button secondary" href="https://santiagopintus.github.io/StarWiki"><i class="back-chevron"></i>Back to all characters</a>
       <h1 class="char-name">${char.name}</h1>
       <div class="details-content">
         <img src=${char.image}></img>
@@ -123,7 +123,7 @@ export default class StarView {
 
   /* Blows the death star up */
   manageStar() {
-    let animationTiming = "20000ms linear forwards";
+    let animationTiming = "10000ms linear forwards";
     document.getElementById(
       "deathStarTop"
     ).style.animation = `deathStarExplodeTop ${animationTiming}`;

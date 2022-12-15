@@ -25,14 +25,14 @@
 @keyframes deathStarExplodeTop {
   100% {
     right: 20rem;
-    bottom: 80rem;
+    bottom: 100rem;
     transform: rotate(960deg);
   }
 }
 
 @keyframes deathStarExplodeBottom {
   100% {
-    right: 115rem;
+    right: 200rem;
     bottom: -100rem;
     transform: rotate(460deg);
   }
