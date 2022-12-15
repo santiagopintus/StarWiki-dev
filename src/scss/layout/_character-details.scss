@@ -1,0 +1,48 @@
+.character-details {
+  background-color: $darkBlue;
+  padding: 2rem;
+
+  .char-name {
+    color: $white;
+    text-align: center;
+    font-size: 5rem;
+  }
+
+  .details-content {
+    max-width: 100%;
+    img {
+      max-width: 100%;
+    }
+
+    .details-list {
+      list-style: none;
+      padding: 1rem;
+      margin: 0;
+      background-color: $blue;
+
+      li {
+        border-bottom: 1px solid $darkBlue;
+        margin-bottom: 1rem;
+        ul li {
+          border-bottom: none;
+          margin-bottom: .5rem;
+        }
+      }
+      .detail-label {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .character-details {
+    .details-content {
+      @include flex-center;
+      gap: 2rem;
+      img {
+        max-width: 50%;
+      }
+    }
+  }
+}

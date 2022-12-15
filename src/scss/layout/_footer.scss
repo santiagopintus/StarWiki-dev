@@ -1,0 +1,12 @@
+.footer {
+  background-color: $red;
+  padding: 2.5rem;
+  margin-top: 5rem;
+  
+  p {
+    text-align: center;
+    .copy-span {
+      font-weight: 700;
+    }
+  }
+}

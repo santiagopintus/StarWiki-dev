@@ -1,3 +1,5 @@
+import { getParamValue } from "./utils.js";
+
 export default class StarController {
   constructor(model, view) {
     this.characters;
@@ -8,7 +10,7 @@ export default class StarController {
   startController() {
     this.displayCharacters();
     this.listenStarExplosion();
-    this.listenCharClick();
+    this.listenViewNavigation();
   }
 
   displayCharacters() {
@@ -18,22 +20,22 @@ export default class StarController {
     });
   }
 
+  listenViewNavigation() {
+    let charId = getParamValue("character");
+    if (charId) {
+      this.starModel.getOneCharacter(charId).then(char => {
+        this.starView.showCharacterDetails(char);
+      });
+    } else {
+      console.log("Not char id", charId);
+    }
+  }
+
   listenStarExplosion() {
     window.addEventListener("scroll", () => {
       if (window.scrollY >= 200) {
         this.starView.manageStar();
       }
     });
-  }
-
-  listenCharClick() {
-    let paramName = "character";
-    const param = new URLSearchParams(window.location.search);
-    const charId = param.get(paramName);
-    console.log(charId);
-  }
-
-  getOneCharacter(id) {
-    return this.characters.find(char => char.id == id);
   }
 }

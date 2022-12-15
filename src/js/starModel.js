@@ -1,10 +1,14 @@
-import { customFetch } from "./utils.js";
+import { customFetch, endpoints } from "./utils.js";
 
 export default class StarModel {
-  constructor(url) {
-    this.apiUrl = url;
+  constructor() {
+    this.getAllUrl = endpoints.getAll;
+    this.getOneUrl = endpoints.getOne;
   }
   getCharacters() {
-    return customFetch(this.apiUrl);
+    return customFetch(this.getAllUrl);
+  }
+  getOneCharacter(id) {
+    return customFetch(`${this.getOneUrl}${id}.json`);
   }
 }

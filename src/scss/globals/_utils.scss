@@ -3,3 +3,28 @@
   max-width: 120rem;
   margin: 0 auto;
 }
+
+.button {
+  padding: 1rem 2rem;
+  border-radius: 2.4rem;
+  text-transform: uppercase;
+  @include flex-center;
+  gap: 1rem;
+  width: fit-content;
+  text-decoration: none;
+  cursor: pointer;
+
+  &.primary {
+    background-color: $darkBlue;
+    color: $white;
+  }
+  &.secondary {
+    background-color: $white;
+    color: $darkBlue;
+    font-weight: 700;
+  }
+  &.centered {
+    display: block;
+    margin: 0 auto;
+  }
+}
