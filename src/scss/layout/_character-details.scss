@@ -10,7 +10,10 @@
 
   .details-content {
     max-width: 100%;
+    margin-bottom: 2.5rem;
     img {
+      display: block;
+      margin: 0 auto;
       max-width: 100%;
     }
 
@@ -41,6 +44,8 @@
       @include flex-center;
       gap: 2rem;
       img {
+        display: inline-block;
+        margin: unset;
         max-width: 50%;
       }
     }

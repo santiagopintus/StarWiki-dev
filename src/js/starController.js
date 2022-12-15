@@ -26,8 +26,6 @@ export default class StarController {
       this.starModel.getOneCharacter(charId).then(char => {
         this.starView.showCharacterDetails(char);
       });
-    } else {
-      console.log("Not char id", charId);
     }
   }
 

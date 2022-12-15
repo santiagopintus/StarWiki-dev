@@ -4,6 +4,7 @@ export default class StarView {
     this.charDetailsContainer = document.getElementById(
       "characterDetailsContainer"
     );
+    this.mainHero = document.getElementById("mainHero");
     this.characters = [];
   }
 
@@ -58,8 +59,14 @@ export default class StarView {
           ${this.getDetailList("Former Affiliations", char.formerAffiliations)}
         </ul>
       </div>
-      <a class="button secondary centered" href="${char.wiki}">More about ${char.name}</a>
-    `;
+      ${
+        char.wiki
+          ? `
+          <a target="_blank" class="button secondary centered" href="${char.wiki}">More about ${char.name}</a>
+        `
+          : ""
+      }
+      `;
   }
 
   getDetailItem(label, value) {
@@ -71,6 +78,7 @@ export default class StarView {
       return "";
     }
   }
+
   getDetailList(label, values) {
     try {
       if (label && values.length) {
@@ -94,19 +102,24 @@ export default class StarView {
     if (isGeneralView) {
       /* Hide Detailed view */
       this.charContainer.classList.remove("hidden");
+      this.mainHero.classList.remove("compact");
       this.charDetailsContainer.classList.add("hidden");
     } else {
       /* Hide General view */
       this.charContainer.classList.add("hidden");
+      this.mainHero.classList.add("compact");
       this.charDetailsContainer.classList.remove("hidden");
     }
   }
 
   /* Blows the death star up */
   manageStar() {
+    let animationTiming = "20000ms linear forwards";
     document.getElementById("deathStarTop").style.animation =
-      "deathStarExplodeTop 3000ms cubic-bezier(0.02, 0.61, 0.75, 1) forwards";
+      `deathStarExplodeTop ${animationTiming}`;
     document.getElementById("deathStarBottom").style.animation =
-      "deathStarExplodeBottom 3000ms cubic-bezier(0.02, 0.61, 0.75, 1) forwards";
+      `deathStarExplodeBottom ${animationTiming}`;
+    document.getElementById("explosion").style.animation =
+      "explosion 500ms cubic-bezier(0.02, 0.61, 0.75, 1) forwards";
   }
 }
