@@ -16,12 +16,21 @@ export default class StarView {
     <a href="?character=${char.id}" class="character">
       <img src="${char.image}" alt="${char.name}">
       <h3>${char.name}</h3>
-      <p>${char.affiliations[0]}</p>
+      ${this.getAffiliation(char)}
     </a>`;
       this.charContainer.appendChild($char);
     });
   }
 
+  getAffiliation(char) {
+    try {
+      if (char.affiliations.length > 0) {
+        return `<p>${char.affiliations[0]}</p>`;
+      } else {return ""}
+    } catch {
+      return "";
+    }
+  }
   /* Render the specified character */
   showCharacterDetails(char) {
     this.switchView(false);
@@ -115,10 +124,12 @@ export default class StarView {
   /* Blows the death star up */
   manageStar() {
     let animationTiming = "20000ms linear forwards";
-    document.getElementById("deathStarTop").style.animation =
-      `deathStarExplodeTop ${animationTiming}`;
-    document.getElementById("deathStarBottom").style.animation =
-      `deathStarExplodeBottom ${animationTiming}`;
+    document.getElementById(
+      "deathStarTop"
+    ).style.animation = `deathStarExplodeTop ${animationTiming}`;
+    document.getElementById(
+      "deathStarBottom"
+    ).style.animation = `deathStarExplodeBottom ${animationTiming}`;
     document.getElementById("explosion").style.animation =
       "explosion 500ms cubic-bezier(0.02, 0.61, 0.75, 1) forwards";
   }
